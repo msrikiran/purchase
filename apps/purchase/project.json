@@ -22,7 +22,12 @@
             "input": "apps/purchase/public"
           }
         ],
-        "styles": ["apps/purchase/src/styles.scss"],
+        "styles": [
+          "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/bootstrap/scss/bootstrap.scss",
+          "apps/purchase/src/styles.scss"
+        ],
         "scripts": [],
         "server": "apps/purchase/src/main.server.ts",
         "prerender": true,
