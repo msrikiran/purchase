@@ -1,0 +1,33 @@
+<div class="admin-page">
+  <p-card header="Simple Card" subheader="Card Subheader">
+    <div class="grid">
+      <div class="col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-left">
+            <p-button icon="pi pi-plus" label="New" severity="success" />
+        </div>
+        </p-toolbar>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12">
+        <p-table [value]="categories" [tableStyle]="{ 'min-width': '50rem' }" styleClass="p-datatable-striped" >
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Image</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-category>
+              <tr>
+                  <td>{{ category.id }}</td>
+                  <td>{{ category.name }}</td>
+                  <td>{{ category.image }}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+      </div>
+    </div>
+  </p-card>
+</div>

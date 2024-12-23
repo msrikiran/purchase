@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@purchase/ui": ["libs/ui/src/public-api.ts"]
+      "@purchase/ui": ["libs/ui/src/public-api.ts"],
+      "@purchase/products": ["libs/products/src/public-api.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
