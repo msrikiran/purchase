@@ -1,0 +1,54 @@
+<p-toast/>
+<div class="admin-page">
+  <p-card
+    [header]="editMode ? 'Edit Category' : 'Add Category'"
+    subheader="add or edit category"
+    styleClass="card"
+  >
+    <div class="grid">
+      <div class="col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-left"></div>
+          <div class="p-toolbar-group-right">
+            <p-button
+              class="pr-4"
+              icon="pi pi-plus "
+              [label]="editMode ? 'Update' : 'Create'"
+              severity="success"
+              (onClick)="onSubmit()"
+            ></p-button>
+            <p-button
+              icon="pi pi-arrow-circle-left"
+              label="Cancel"
+              severity="secondary"
+              (onClick)="onCancel()"
+            ></p-button>
+          </div>
+        </p-toolbar>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="grid">
+            <div class="col-4">
+              <label for="name">Name</label>
+              <input pInputText id="name" formControlName="name" required />
+              <div *ngIf="categoryForm['name'].invalid && isSubmitted && categoryForm['name'].touched" class="error">
+                Name is required.
+              </div>
+            </div>
+
+            <div class="col-4">
+              <label for="image">Image</label>
+              <input pInputText id="image" formControlName="image" required />
+              <div *ngIf="categoryForm['image'].invalid && isSubmitted && categoryForm['image'].touched" class="error">
+                image is required.
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+    </div>
+  </p-card>
+</div>

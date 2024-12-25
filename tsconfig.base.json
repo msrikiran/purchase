@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@purchase/ui": ["libs/ui/src/public-api.ts"],
-      "@purchase/products": ["libs/products/src/public-api.ts"]
+      "@purchase/products": ["libs/products/src/public-api.ts"],
+      "@env/*": ["environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
