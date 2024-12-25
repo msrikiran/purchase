@@ -1,4 +1,4 @@
-<p-toast/>
+<p-toast />
 <div class="admin-page">
   <p-card
     [header]="editMode ? 'Edit Category' : 'Add Category'"
@@ -34,7 +34,14 @@
             <div class="col-4">
               <label for="name">Name</label>
               <input pInputText id="name" formControlName="name" required />
-              <div *ngIf="categoryForm['name'].invalid && isSubmitted && categoryForm['name'].touched" class="error">
+              <div
+                *ngIf="
+                  categoryForm['name'].invalid &&
+                  isSubmitted &&
+                  categoryForm['name'].touched
+                "
+                class="error"
+              >
                 Name is required.
               </div>
             </div>
@@ -42,13 +49,20 @@
             <div class="col-4">
               <label for="image">Image</label>
               <input pInputText id="image" formControlName="image" required />
-              <div *ngIf="categoryForm['image'].invalid && isSubmitted && categoryForm['image'].touched" class="error">
+              <div
+                *ngIf="
+                  categoryForm['image'].invalid &&
+                  isSubmitted &&
+                  categoryForm['image'].touched
+                "
+                class="error"
+              >
                 image is required.
               </div>
             </div>
           </div>
         </form>
-        </div>
+      </div>
     </div>
   </p-card>
 </div>

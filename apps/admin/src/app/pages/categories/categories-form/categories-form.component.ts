@@ -15,7 +15,7 @@ import { CategoriesService, Category } from '@purchase/products';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { timer } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-categories-form',
@@ -29,6 +29,7 @@ import { ActivatedRoute } from '@angular/router';
     ReactiveFormsModule,
     CommonModule,
     ToastModule,
+    RouterModule,
   ],
   templateUrl: './categories-form.component.html',
   styleUrls: ['./categories-form.component.scss'],
@@ -44,7 +45,8 @@ export class CategoriesFormComponent implements OnInit {
     private fb: FormBuilder,
     private categoriesService: CategoriesService,
     private location: Location,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -53,10 +55,14 @@ export class CategoriesFormComponent implements OnInit {
       image: ['', Validators.required],
     });
 
+    this._checkEditMode();
+  }
+
+  private _checkEditMode() {
     this.route.params.subscribe((params) => {
       if (params['id']) {
-        this.editMode = true; // Set the component to edit mode
-        this.currentCategoryId = params['id']; // Store the category ID from the route parameters
+        this.editMode = true;
+        this.currentCategoryId = params['id'];
         this.categoriesService
           .getCategory(params['id'])
           .subscribe((category) => {
@@ -135,7 +141,6 @@ export class CategoriesFormComponent implements OnInit {
   }
 
   onCancel() {
-    this.isSubmitted = false;
-    this.form.reset();
+    this.router.navigate(['/categories']);
   }
 }
