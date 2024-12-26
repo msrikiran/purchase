@@ -87,4 +87,8 @@ export class CategoriesListComponent implements OnInit {
   onUpdateCategory(catId: number) {
     this.router.navigateByUrl(`categories/form/${catId}`);
   }
+
+  navigateToCategoryForm() {
+    this.router.navigateByUrl('categories/form');
+  }
 }

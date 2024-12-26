@@ -1,7 +1,7 @@
 <p-toast />
 <p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>
 <div class="admin-page">
-  <p-card header="Categories" subheader="Add new categories here">
+  <p-card header="Categories" subheader="List of categories here">
     <div class="grid">
       <div class="col-12">
         <p-toolbar>
@@ -10,7 +10,7 @@
               icon="pi pi-plus"
               label="New"
               severity="success"
-              [routerLink]="['/categories/form']"
+              (click)="navigateToCategoryForm()"
             ></p-button>
           </div>
         </p-toolbar>

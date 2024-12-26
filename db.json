@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": "c29f",
+      "name": "kiran",
+      "image": "srikrian"
+    },
+    {
+      "id": "ab27",
+      "name": "ramwe",
+      "image": "kirannajnf"
+    },
+    {
+      "id": "fd24",
+      "name": "kiran",
+      "image": "https://asdf.asdf.com"
+    }
+  ],
+  "orderItems": [
+    {
+      "_id": "5fb840e81df983c158869334",
+      "quantity": 5,
+      "product": "5f15da13e520d44421ed8e9e",
+      "id": "1464"
+    }
+  ],
+  "orders": [
+    {
+      "_id": "6072d4e83abd910cb7358aad",
+      "orderItems": [
+        "6072d4e83abd910cb7358aab",
+        "6072d4e83abd910cb7358aac"
+      ],
+      "status": "1",
+      "shippingAddress1": "Flowers Street",
+      "city": "Prague",
+      "totalPrice": 1240.9,
+      "id": "4c01"
+    }
+  ],
+  "products": [
+    {
+      "_id": "5f15d8852a025143f9593a7c",
+      "name": "Surface Pro 7 128GB",
+      "brand": "ASUS",
+      "price": 250,
+      "countInStock": 8,
+      "id": "a048"
+    }
+  ],
+  "users": [
+    {
+      "_id": "5f1687e1be2e99a158c08504",
+      "name": "Fadi Nouh",
+      "email": "fadinoh@gmail.com",
+      "phone": "420702241333",
+      "id": "8210"
+    }
+  ]
+}
